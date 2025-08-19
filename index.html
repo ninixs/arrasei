@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>colocando em prática</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #fff7fe, #8a0479);
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .botoes {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #sim {
+      background: #8a0479;
+      color: white;
+    }
+
+    #nao {
+      background: #42143c;
+      color: white;
+      position: relative;
+    }
+
+    .assinatura {
+      position: fixed;
+      bottom: 10px;
+      right: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Arraseiii, né? </h1>
+
+  <div class="botoes">
+    <button id="sim">Sim</button>
+    <button id="nao">Não</button>
+  </div>
+
+  <div class="assinatura">A++ niniixz 💅🏻</div>
+
+  <script>
+    const botaoSim = document.getElementById("sim");
+    const botaoNao = document.getElementById("nao");
+
+    botaoSim.addEventListener("click", () => {
+      alert("eu sei, aprendi direitin 💅🏻");
+    });
+
+    botaoNao.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - botaoNao.offsetWidth);
+      const y = Math.random() * (window.innerHeight - botaoNao.offsetHeight);
+      botaoNao.style.position = "absolute";
+      botaoNao.style.left = `${x}px`;
+      botaoNao.style.top = `${y}px`;
+    });
+  </script>
+</body>
+</html>
